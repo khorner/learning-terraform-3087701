@@ -72,7 +72,7 @@ module "alb" {
   security_groups = [module.blog_sg.security_group_id]
 
   listeners = {
-    {
+    http_default = {
       port               = 80
       protocol           = "HTTP"
       target_group_key = "blog-instance"
